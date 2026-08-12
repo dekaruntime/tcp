@@ -1,24 +1,261 @@
 import { Result } from 'core/result'
 
+/// docid: phpx/tcp/connect()
+/// <Function name="connect">
+///   <Description>PHPX standard module function `connect` from `tcp`.</Description>
+///   <Parameter name="$host" type="string" required="true" typeLink="/docs/php/types/string">
+///     Parameter $host.
+///   </Parameter>
+///   <Parameter name="$port" type="int" required="true" typeLink="/docs/php/types/int">
+///     Parameter $port.
+///   </Parameter>
+///   <Parameter name="$options" type="Object" required="false">
+///     Parameter $options.
+///   </Parameter>
+///   <ReturnType type="Promise<Result<int, string>>" />
+/// </Function>
 export function connect($host: string, $port: int, $options: Object = {}): Promise<Result<int, string>>
+
+/// docid: phpx/tcp/read()
+/// <Function name="read">
+///   <Description>PHPX standard module function `read` from `tcp`.</Description>
+///   <Parameter name="$handle" type="int" required="true" typeLink="/docs/php/types/int">
+///     Parameter $handle.
+///   </Parameter>
+///   <Parameter name="$max_bytes" type="int" required="false" typeLink="/docs/php/types/int">
+///     Parameter $max_bytes.
+///   </Parameter>
+///   <ReturnType type="Promise<Result<string, string>>" />
+/// </Function>
 export function read($handle: int, $max_bytes: int = 4096): Promise<Result<string, string>>
+
+/// docid: phpx/tcp/readExact()
+/// <Function name="readExact">
+///   <Description>PHPX standard module function `readExact` from `tcp`.</Description>
+///   <Parameter name="$handle" type="int" required="true" typeLink="/docs/php/types/int">
+///     Parameter $handle.
+///   </Parameter>
+///   <Parameter name="$count" type="int" required="true" typeLink="/docs/php/types/int">
+///     Parameter $count.
+///   </Parameter>
+///   <ReturnType type="Promise<Result<string, string>>" />
+/// </Function>
 export function readExact($handle: int, $count: int): Promise<Result<string, string>>
+
+/// docid: phpx/tcp/write()
+/// <Function name="write">
+///   <Description>PHPX standard module function `write` from `tcp`.</Description>
+///   <Parameter name="$handle" type="int" required="true" typeLink="/docs/php/types/int">
+///     Parameter $handle.
+///   </Parameter>
+///   <Parameter name="$data" type="string" required="true" typeLink="/docs/php/types/string">
+///     Parameter $data.
+///   </Parameter>
+///   <ReturnType type="Promise<Result<int, string>>" />
+/// </Function>
 export function write($handle: int, $data: string): Promise<Result<int, string>>
+
+/// docid: phpx/tcp/setDeadline()
+/// <Function name="setDeadline">
+///   <Description>PHPX standard module function `setDeadline` from `tcp`.</Description>
+///   <Parameter name="$handle" type="int" required="true" typeLink="/docs/php/types/int">
+///     Parameter $handle.
+///   </Parameter>
+///   <Parameter name="$millis" type="int" required="true" typeLink="/docs/php/types/int">
+///     Parameter $millis.
+///   </Parameter>
+///   <ReturnType type="Promise<Result<Object, string>>" />
+/// </Function>
 export function setDeadline($handle: int, $millis: int): Promise<Result<Object, string>>
+
+/// docid: phpx/tcp/close()
+/// <Function name="close">
+///   <Description>PHPX standard module function `close` from `tcp`.</Description>
+///   <Parameter name="$handle" type="int" required="true" typeLink="/docs/php/types/int">
+///     Parameter $handle.
+///   </Parameter>
+///   <ReturnType type="Promise<Result<Object, string>>" />
+/// </Function>
 export function close($handle: int): Promise<Result<Object, string>>
 
+/// docid: phpx/tcp/connectSync()
+/// <Function name="connectSync">
+///   <Description>PHPX standard module function `connectSync` from `tcp`.</Description>
+///   <Parameter name="$host" type="string" required="true" typeLink="/docs/php/types/string">
+///     Parameter $host.
+///   </Parameter>
+///   <Parameter name="$port" type="int" required="true" typeLink="/docs/php/types/int">
+///     Parameter $port.
+///   </Parameter>
+///   <Parameter name="$options" type="Object" required="false">
+///     Parameter $options.
+///   </Parameter>
+///   <ReturnType type="Result<int, string>" />
+/// </Function>
 export function connectSync($host: string, $port: int, $options: Object = {}): Result<int, string>
+
+/// docid: phpx/tcp/readSync()
+/// <Function name="readSync">
+///   <Description>PHPX standard module function `readSync` from `tcp`.</Description>
+///   <Parameter name="$handle" type="int" required="true" typeLink="/docs/php/types/int">
+///     Parameter $handle.
+///   </Parameter>
+///   <Parameter name="$max_bytes" type="int" required="false" typeLink="/docs/php/types/int">
+///     Parameter $max_bytes.
+///   </Parameter>
+///   <ReturnType type="Result<string, string>" />
+/// </Function>
 export function readSync($handle: int, $max_bytes: int = 4096): Result<string, string>
+
+/// docid: phpx/tcp/readExactSync()
+/// <Function name="readExactSync">
+///   <Description>PHPX standard module function `readExactSync` from `tcp`.</Description>
+///   <Parameter name="$handle" type="int" required="true" typeLink="/docs/php/types/int">
+///     Parameter $handle.
+///   </Parameter>
+///   <Parameter name="$count" type="int" required="true" typeLink="/docs/php/types/int">
+///     Parameter $count.
+///   </Parameter>
+///   <ReturnType type="Result<string, string>" />
+/// </Function>
 export function readExactSync($handle: int, $count: int): Result<string, string>
+
+/// docid: phpx/tcp/writeSync()
+/// <Function name="writeSync">
+///   <Description>PHPX standard module function `writeSync` from `tcp`.</Description>
+///   <Parameter name="$handle" type="int" required="true" typeLink="/docs/php/types/int">
+///     Parameter $handle.
+///   </Parameter>
+///   <Parameter name="$data" type="string" required="true" typeLink="/docs/php/types/string">
+///     Parameter $data.
+///   </Parameter>
+///   <ReturnType type="Result<int, string>" />
+/// </Function>
 export function writeSync($handle: int, $data: string): Result<int, string>
+
+/// docid: phpx/tcp/setDeadlineSync()
+/// <Function name="setDeadlineSync">
+///   <Description>PHPX standard module function `setDeadlineSync` from `tcp`.</Description>
+///   <Parameter name="$handle" type="int" required="true" typeLink="/docs/php/types/int">
+///     Parameter $handle.
+///   </Parameter>
+///   <Parameter name="$millis" type="int" required="true" typeLink="/docs/php/types/int">
+///     Parameter $millis.
+///   </Parameter>
+///   <ReturnType type="Result<Object, string>" />
+/// </Function>
 export function setDeadlineSync($handle: int, $millis: int): Result<Object, string>
+
+/// docid: phpx/tcp/closeSync()
+/// <Function name="closeSync">
+///   <Description>PHPX standard module function `closeSync` from `tcp`.</Description>
+///   <Parameter name="$handle" type="int" required="true" typeLink="/docs/php/types/int">
+///     Parameter $handle.
+///   </Parameter>
+///   <ReturnType type="Result<Object, string>" />
+/// </Function>
 export function closeSync($handle: int): Result<Object, string>
 
+/// docid: phpx/tcp/tcp_connect()
+/// <Function name="tcp_connect">
+///   <Description>PHPX standard module function `tcp_connect` from `tcp`.</Description>
+///   <Parameter name="$host" type="string" required="true" typeLink="/docs/php/types/string">
+///     Parameter $host.
+///   </Parameter>
+///   <Parameter name="$port" type="int" required="true" typeLink="/docs/php/types/int">
+///     Parameter $port.
+///   </Parameter>
+///   <Parameter name="$options" type="Object" required="false">
+///     Parameter $options.
+///   </Parameter>
+///   <ReturnType type="Result<int, string>" />
+/// </Function>
 export function tcp_connect($host: string, $port: int, $options: Object = {}): Result<int, string>
+
+/// docid: phpx/tcp/tcp_read()
+/// <Function name="tcp_read">
+///   <Description>PHPX standard module function `tcp_read` from `tcp`.</Description>
+///   <Parameter name="$handle" type="int" required="true" typeLink="/docs/php/types/int">
+///     Parameter $handle.
+///   </Parameter>
+///   <Parameter name="$max_bytes" type="int" required="false" typeLink="/docs/php/types/int">
+///     Parameter $max_bytes.
+///   </Parameter>
+///   <ReturnType type="Result<string, string>" />
+/// </Function>
 export function tcp_read($handle: int, $max_bytes: int = 4096): Result<string, string>
+
+/// docid: phpx/tcp/read_exact()
+/// <Function name="read_exact">
+///   <Description>PHPX standard module function `read_exact` from `tcp`.</Description>
+///   <Parameter name="$handle" type="int" required="true" typeLink="/docs/php/types/int">
+///     Parameter $handle.
+///   </Parameter>
+///   <Parameter name="$count" type="int" required="true" typeLink="/docs/php/types/int">
+///     Parameter $count.
+///   </Parameter>
+///   <ReturnType type="Result<string, string>" />
+/// </Function>
 export function read_exact($handle: int, $count: int): Result<string, string>
+
+/// docid: phpx/tcp/tcp_read_exact()
+/// <Function name="tcp_read_exact">
+///   <Description>PHPX standard module function `tcp_read_exact` from `tcp`.</Description>
+///   <Parameter name="$handle" type="int" required="true" typeLink="/docs/php/types/int">
+///     Parameter $handle.
+///   </Parameter>
+///   <Parameter name="$count" type="int" required="true" typeLink="/docs/php/types/int">
+///     Parameter $count.
+///   </Parameter>
+///   <ReturnType type="Result<string, string>" />
+/// </Function>
 export function tcp_read_exact($handle: int, $count: int): Result<string, string>
+
+/// docid: phpx/tcp/tcp_write()
+/// <Function name="tcp_write">
+///   <Description>PHPX standard module function `tcp_write` from `tcp`.</Description>
+///   <Parameter name="$handle" type="int" required="true" typeLink="/docs/php/types/int">
+///     Parameter $handle.
+///   </Parameter>
+///   <Parameter name="$data" type="string" required="true" typeLink="/docs/php/types/string">
+///     Parameter $data.
+///   </Parameter>
+///   <ReturnType type="Result<int, string>" />
+/// </Function>
 export function tcp_write($handle: int, $data: string): Result<int, string>
+
+/// docid: phpx/tcp/set_deadline()
+/// <Function name="set_deadline">
+///   <Description>PHPX standard module function `set_deadline` from `tcp`.</Description>
+///   <Parameter name="$handle" type="int" required="true" typeLink="/docs/php/types/int">
+///     Parameter $handle.
+///   </Parameter>
+///   <Parameter name="$millis" type="int" required="true" typeLink="/docs/php/types/int">
+///     Parameter $millis.
+///   </Parameter>
+///   <ReturnType type="Result<Object, string>" />
+/// </Function>
 export function set_deadline($handle: int, $millis: int): Result<Object, string>
+
+/// docid: phpx/tcp/tcp_set_deadline()
+/// <Function name="tcp_set_deadline">
+///   <Description>PHPX standard module function `tcp_set_deadline` from `tcp`.</Description>
+///   <Parameter name="$handle" type="int" required="true" typeLink="/docs/php/types/int">
+///     Parameter $handle.
+///   </Parameter>
+///   <Parameter name="$millis" type="int" required="true" typeLink="/docs/php/types/int">
+///     Parameter $millis.
+///   </Parameter>
+///   <ReturnType type="Result<Object, string>" />
+/// </Function>
 export function tcp_set_deadline($handle: int, $millis: int): Result<Object, string>
+
+/// docid: phpx/tcp/tcp_close()
+/// <Function name="tcp_close">
+///   <Description>PHPX standard module function `tcp_close` from `tcp`.</Description>
+///   <Parameter name="$handle" type="int" required="true" typeLink="/docs/php/types/int">
+///     Parameter $handle.
+///   </Parameter>
+///   <ReturnType type="Result<Object, string>" />
+/// </Function>
 export function tcp_close($handle: int): Result<Object, string>
