@@ -1,0 +1,29 @@
+// Host-granted TCP. Handles are rids (number). Bind byte results with `let`.
+
+export fn connect(host: string, port: number) {
+  return bridge net.connect(host, port)
+}
+
+export fn listen(host: string, port: number) {
+  return bridge net.listen(host, port)
+}
+
+export fn accept(handle: number) {
+  return bridge net.accept(handle)
+}
+
+export fn read(handle: number, max_bytes: number = 4096) {
+  return bridge net.read(handle, max_bytes)
+}
+
+export fn write(handle: number, data: bytes) {
+  return bridge net.write(handle, data)
+}
+
+export fn close(handle: number) {
+  return bridge net.close(handle)
+}
+
+export fn set_deadline(handle: number, millis: number) {
+  return bridge net.set_deadline(handle, millis)
+}
